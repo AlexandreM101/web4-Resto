@@ -24,6 +24,8 @@ $sql = "
         ingredients,
         image
     FROM plats
+    ORDER BY 
+    nom ASC
 ";
 $stmt = $bdd->prepare($sql);
 $stmt->execute();

@@ -11,6 +11,8 @@ $sql = "
         ingredients,
         prix
     FROM plats
+    ORDER BY 
+    nom ASC
 ";
 
 $stmt = $bdd->prepare($sql);
