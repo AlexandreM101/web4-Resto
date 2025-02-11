@@ -1,6 +1,6 @@
 <?php
 
-include "../includes/bdd.php";
+include "../../includes/bdd.php";
 
 if (!empty($_POST))
 {
@@ -11,7 +11,7 @@ if (!empty($_POST))
     $cheminImage = null;
     if (!empty($_FILES["image"]["name"]))
     {
-        $dossierUpload = "../images/";
+        $dossierUpload = "../../images/";
         $cheminImage = $dossierUpload . basename($_FILES["image"]["name"]);
 
         if (!move_uploaded_file($_FILES["image"]["tmp_name"], $cheminImage))
@@ -49,7 +49,7 @@ if (!empty($_POST))
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajouter un repas</title>
-    <link rel="stylesheet" href="../css/ajoute.css">
+    <link rel="stylesheet" href="../../css/ajoute.css">
     
 </head>
 <body>
