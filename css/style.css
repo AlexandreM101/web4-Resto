@@ -1,0 +1,74 @@
+div.menu {
+    display: flex;
+    position: relative;
+    align-items: center;
+    background-color: lightblue;
+    margin: 10px;
+}
+
+div.menu p {
+    font-size: 30px;
+    padding-left: 20px;
+}
+
+div.menu p.name {
+    width: 800px;
+}
+
+div.menu .link {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+div.menu .link a {
+    padding: 10px;
+    margin: 15px;
+}
+
+div.box {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: auto;
+}
+
+h1 {
+    margin: auto;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+h2 {
+    padding-left: 10px;
+}
+
+body {
+    background-color: azure;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    border: solid black 3px;
+    text-align: center;
+}
+
+a:hover {
+    border: solid 3px white;
+    color: white;
+}
+
+a.ajoute {
+    margin-right: 9px;
+    padding: 10px;
+}
+
+div.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+    margin: auto;
+}

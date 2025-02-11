@@ -1,0 +1,65 @@
+h1 {
+    margin: auto;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    margin: auto;
+}
+div.txt {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: lightblue;
+    margin: 20px;
+}
+
+div.txt input {
+    width: 280px;
+    height: 25px;
+}
+
+div.txt p {
+    width: 100px;
+}
+
+div.image {
+    position: relative;
+    width: 75%;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+div.image p {
+   padding-right: 100px; 
+}
+
+div.bouton {
+    display: flex;
+    justify-content: center;
+    width: 75%;
+}
+
+div.bouton input
+{
+    padding: 10px 40px;
+    background-color: lightblue;
+}
+
+div.bouton input:hover {
+    background-color: white;
+}
+
+
