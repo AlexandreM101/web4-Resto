@@ -10,12 +10,12 @@ $sql = "
         prix,
         ingredients,
         prix
-    FROM entrées
+    FROM plats
 ";
 
 $stmt = $bdd->prepare($sql);
 $stmt->execute();
-$entres = $stmt->fetchAll();
+$plats = $stmt->fetchAll();
 
 ?>
 
@@ -28,9 +28,9 @@ $entres = $stmt->fetchAll();
 </head>
 <body>
     <ul>
-        <?php foreach ($entres as $entre): ?>
+        <?php foreach ($plats as $plat): ?>
         <li>
-            <strong><?= $entre["nom"] ?></strong> <?= $entre["prix"] ?>
+            <strong><?= $plat["nom"] ?></strong> <?= $plat["prix"] ?>
         </li>
         <?php endforeach ?>    
     </ul>

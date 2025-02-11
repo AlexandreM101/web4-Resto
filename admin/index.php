@@ -3,7 +3,7 @@ include "../includes/bdd.php";
 
 if (!empty($_GET["supprimer"])) {
     $sql = "
-        DELETE FROM entrées
+        DELETE FROM plats
         WHERE id = :id
     ";
 
@@ -23,11 +23,11 @@ $sql = "
         prix,
         ingredients,
         image
-    FROM entrées
+    FROM plats
 ";
 $stmt = $bdd->prepare($sql);
 $stmt->execute();
-$entres = $stmt->fetchAll();
+$plats = $stmt->fetchAll();
 
 ?>
 
@@ -51,14 +51,14 @@ $entres = $stmt->fetchAll();
             </p>
         </div>
         <div class="box">
-            <?php foreach ($entres as $entre): ?>
+            <?php foreach ($plats as $plat): ?>
                 <div class="menu">
-                    <p class="name"><?= $entre["nom"] ?></p>
-                    <p><?= $entre["prix"] ?></p>
-                    <!-- <img src="<?= $entre["image"]?>" alt=""> -->
+                    <p class="name"><?= $plat["nom"] ?></p>
+                    <p><?= $plat["prix"] ?></p>
+                    <!-- <img src="<?= $plat["image"]?>" alt=""> -->
                     <div class="link">
-                        <a href="modifier.php?id=<?= $entre["id"]?>">Modifier</a>
-                        <a href="index.php?supprimer=<?= $entre["id"]?>">Supprimer</a>
+                        <a href="modifier.php?id=<?= $plat["id"]?>">Modifier</a>
+                        <a href="index.php?supprimer=<?= $plat["id"]?>">Supprimer</a>
                     </div>
                 </div>
                 <?php endforeach ?>

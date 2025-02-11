@@ -22,7 +22,7 @@ if (!empty($_POST))
 
 
     $sql = "
-        INSERT INTO entrées
+        INSERT INTO plats
             (nom,acoter,prix,ingredients,image)
         VALUES
             (:nom,:acoter,:prix,:ingredients,:image) 

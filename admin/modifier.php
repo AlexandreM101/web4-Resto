@@ -11,7 +11,7 @@ if (empty($_POST))
     $sql = "
     
         SELECT *
-        FROM entrées
+        FROM plats
         WHERE id = :id
     ";
     
@@ -19,7 +19,7 @@ if (empty($_POST))
     $stmt->execute([
         ":id" => $id,
     ]);
-    $entre = $stmt->fetch();
+    $plat = $stmt->fetch();
 
 }
 else 
@@ -35,7 +35,7 @@ else
 
     //toujours avoir une condition comme le delete
     $sql = "
-      UPDATE entrées
+      UPDATE plats
       SET 
         nom = :nom,
         acoter = :acoter,
@@ -76,21 +76,21 @@ else
     <h1>Modifier</h1>
     <form action="" method="post">
 
-        <input type="hidden" name="id" value="<?= $entre["id"] ?>">
+        <input type="hidden" name="id" value="<?= $plat["id"] ?>">
         <p>Nom:</p>
-        <input type="text" name="nom" value="<?= $entre["nom"] ?>">
+        <input type="text" name="nom" value="<?= $plat["nom"] ?>">
 
         <p>Acoter:</p>
-        <input type="text" name="acoter" value="<?= $entre["acoter"] ?>">
+        <input type="text" name="acoter" value="<?= $plat["acoter"] ?>">
         
         <p>Prix:</p>
-        <input type="text" name="prix" value="<?= $entre["prix"] ?>">
+        <input type="text" name="prix" value="<?= $plat["prix"] ?>">
         
         <p>Ingredients:</p>
-        <input type="text" name="ingredients" value="<?= $entre["ingredients"] ?>">
+        <input type="text" name="ingredients" value="<?= $plat["ingredients"] ?>">
         
         <p>image:</p>
-        <input type="file" name="image" value="<?= $entre["image"] ?>">
+        <input type="file" name="image" value="<?= $plat["image"] ?>">
         <p>
             <input type="submit" value="Modifier">
         </p>
