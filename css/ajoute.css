@@ -1,8 +1,27 @@
+body {
+    background-color: azure;
+}
 h1 {
     margin: auto;
     text-align: center;
     padding-bottom: 20px;
     padding-top: 20px;
+}
+
+a.retour {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    border: solid 3px black;
+    padding: 10px 20px;
+}
+
+a.retour:hover {
+    border: solid 3px rgb(69, 185, 223);
+    color: rgb(69, 185, 223);
 }
 
 form {

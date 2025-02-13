@@ -54,7 +54,7 @@ if (!empty($_POST))
 </head>
 <body>
     <p>
-        <a href="index.php">Retour</a>
+        <a class = "retour" href="index.php">Retour</a>
     </p>
     <h1>Ajouter</h1>
     <form action="" method="post" enctype="multipart/form-data">

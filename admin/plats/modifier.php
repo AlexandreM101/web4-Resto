@@ -68,32 +68,46 @@ else
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modifier</title>
+    <link rel="stylesheet" href="../../css/ajoute.css">
 </head>
 <body>
     <p>
-        <a href="index.php">Retour</a>
+        <a class = "retour" href="index.php">Retour</a>
     </p>
     <h1>Modifier</h1>
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
 
         <input type="hidden" name="id" value="<?= $plat["id"] ?>">
-        <p>Nom:</p>
-        <input type="text" name="nom" value="<?= $plat["nom"] ?>">
 
-        <p>Acoter:</p>
-        <input type="text" name="acoter" value="<?= $plat["acoter"] ?>">
+        <div class="txt">
+            <p>Nom:</p>
+            <input type="text" name="nom" value="<?= $plat["nom"] ?>">
+        </div>
+
+        <div class="txt">
+            <p>Acoter:</p>
+            <input type="text" name="acoter" value="<?= $plat["acoter"] ?>">
+        </div>
         
-        <p>Prix:</p>
-        <input type="text" name="prix" value="<?= $plat["prix"] ?>">
+        <div class="txt">
+            <p>Prix:</p>
+            <input type="text" name="prix" value="<?= $plat["prix"] ?>">
+        </div>
         
-        <p>Ingredients:</p>
-        <input type="text" name="ingredients" value="<?= $plat["ingredients"] ?>">
+        <div class="txt">
+            <p>Ingredients:</p>
+            <input type="text" name="ingredients" value="<?= $plat["ingredients"] ?>">
+        </div>
         
-        <p>image:</p>
-        <input type="file" name="image" value="<?= $plat["image"] ?>">
-        <p>
-            <input type="submit" value="Modifier">
-        </p>
+        <div class="image">
+            <p>image:</p>
+            <input type="file" name="image" value="<?= $plat["image"] ?>">
+        </div>
+        <div class="bouton">
+            <p>
+                <input type="submit" value="Modifier">
+            </p>
+        </div>
     </form>
 </body>
 </html>

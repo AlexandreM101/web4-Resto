@@ -72,3 +72,9 @@ div.nav {
     width: 85%;
     margin: auto;
 }
+
+.ajoute:hover {
+    border: solid 3px rgb(69, 185, 223);
+    color: rgb(69, 185, 223);
+    
+}
